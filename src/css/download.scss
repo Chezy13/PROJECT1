@@ -1,0 +1,81 @@
+.download-container{
+    padding: 114px 0;
+    @media (max-width: 700px){
+        padding: 45px 0;
+    }
+}
+
+.download__title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    @media (max-width: 700px) {
+        font-size: 18px;
+        line-height: 21px;
+        max-width: 280px;
+        margin: auto;
+    }
+}
+
+.download__subtitle{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 1);
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    @media (max-width: 700px) {
+        font-size: 13px;
+        line-height: 15px;
+        max-width: 280px;
+        margin: auto;
+        padding-top: 20px;
+    }
+}
+
+.download__btn{
+    margin-top: 50px;
+    @media (max-width: 700px) {
+        margin-top: 14px;
+    }
+    & a{
+        @include btn;
+
+        @media (max-width: 1024px) {
+            @include btn-tab;
+            font-size: 18px;
+            line-height: 21px;
+        }
+        @media (max-width: 700px) {
+            @include btn-tab;
+            font-size: 18px;
+            line-height: 21px;
+            width: 280px;
+        }
+    }
+    
+    & :hover{
+        @include hover-btn;
+    }
+    
+    & :active{
+        @include active-btn;
+    }
+}

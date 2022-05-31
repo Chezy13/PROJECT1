@@ -1,0 +1,28 @@
+@import "mixin.scss";
+@import "banner.scss";
+@import "download.scss";
+@import "features.scss";
+@import "footer.scss";
+@import "team.scss";
+@import "testimonials.scss";
+@import "works.scss";
+@import "fonts.scss";
+
+@import "../../node_modules/swiper/swiper.min.css";
+@import "../../node_modules/swiper/modules/pagination/pagination.min.css";
+@import "../../node_modules/swiper/modules/navigation/navigation.min.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.wrapper{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

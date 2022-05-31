@@ -1,0 +1,249 @@
+.banner{
+    position: relative;
+    background: url(../img/banner/img.png) no-repeat center;
+    background-size: cover;
+
+    &::before{
+    position: absolute;
+    content: "";
+    background: rgba(37, 43, 73, 1);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 80%;
+}
+
+    &-logo{
+    position: relative;
+    z-index: 5;
+}
+
+    &-header{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 38px;
+    padding-bottom: 36px;
+
+    &:after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: rgba(186, 187, 197, 1);
+        bottom: 0;
+        left: 0;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    }
+    @media (max-width: 700px) {
+    &-logo a img {
+        height: 14px;
+    }
+    }
+    &-nav{
+        @media (max-width:768px) {
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(37, 43, 73, 1);
+        padding: 150px 0 0 0; */
+        display: none;
+        }
+    }
+}
+
+.header-burger{
+    display: none;
+    & span {
+        background-color: rgba(255, 255, 255, 1);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 8px;
+    }
+    @media (max-width:768px) {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            position: relative;
+            z-index: 5;
+        
+    }
+    &::before,
+    &::after {
+        content:'';
+        background-color: rgba(255, 255, 255, 1);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+.nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+        display: block;
+    }
+    &__item{
+        @media (max-width: 768px) {
+            padding: 0 0 10px 0;
+        }
+    }
+    &__item a{
+    font-size: 13px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 1);
+    padding: 0 20px 0 20px;
+    @media (max-width: 1024px) {
+        font-size: 12px;
+        line-height: 14px;  
+    }
+    
+}
+}
+
+.underline {
+    position: relative;
+
+
+    &:active{
+    color: rgba(231, 20, 20, 1);
+}
+
+    &:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -49px;
+    width: 0;
+    height: 3px; /* Высота линии */
+    background-color: rgba(186, 187, 197, 1); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+    &:after:active{
+    color: rgba(231, 20, 20, 1);
+}
+
+    &:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -49px;
+    height: 3px; /* Высота линии */
+    background-color: rgba(186, 187, 197, 1); /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+    &:hover:after:active{
+    color: rgba(231, 20, 20, 1);
+}
+}
+
+.banner-main{
+    position: relative;
+    z-index: 1;
+    padding: 130px 0 120px 0;
+    text-align: center;
+    @media (max-width: 700px) {
+        padding: 70px 0 52px;
+    }
+
+
+    &__title{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    font-size: 64px;
+    line-height: 75px;
+    @media (max-width: 1024px) {
+        font-size: 48px;
+        line-height: 56px;  
+    }
+    @media (max-width: 700px) {
+        font-size: 36px;
+        line-height: 42px;
+        max-width: 280px;
+        margin: auto;
+    }
+    
+    
+}
+
+    &__subtitle{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 32px;
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 21px;  
+    }
+    @media (max-width: 700px) {
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 280px;
+        padding-top: 33px;
+        margin: auto;
+    }
+}
+
+    &__btn{
+    margin: 82px auto 0;
+    @media (max-width: 700px) {
+        margin: 50px auto 0;
+    }
+    & a{
+        @include btn;
+        @media (max-width: 1024px) {
+            @include btn-tab;
+        }
+        @media (max-width: 700px) {
+            @include btn-mob;
+        }
+    }
+    
+    & :hover{
+        @include hover-btn;
+    }
+    
+    & :active{
+        @include active-btn;
+    }
+}
+}

@@ -1,0 +1,110 @@
+@mixin btn {
+    background: #FF4343;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+    width: 370px;
+    padding: 29.5px 0;   
+    text-decoration: none;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+@mixin btn-tab {
+    background: #FF4343;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+    width: 314px;
+    padding: 29.5px 0;   
+    text-decoration: none;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+@mixin btn-mob {
+    background: #FF4343;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+    width: 280px;
+    padding: 16px 0 ;   
+    text-decoration: none;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+@mixin hover-btn {
+    background-color: rgba(231, 20, 20, 1);
+}
+
+@mixin active-btn {
+    background-color: rgba(255, 67, 67, 1);
+    box-shadow: 4px 4px 30px 0px rgba(255, 67, 67, 1);
+}
+
+@mixin footer-top-position {
+    flex-basis: 33.3%;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin footer-title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+}
+
+@mixin footer-title-tab {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+}
+
+@mixin footer-subtitle {
+    padding-top: 29px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: rgba(255, 255, 255, 1);
+}
+
+@mixin footer-subtitle-tab {
+    padding-top: 29px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+        color: rgba(255, 255, 255, 1);
+}
